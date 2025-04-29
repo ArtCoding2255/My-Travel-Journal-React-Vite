@@ -5,17 +5,18 @@ export default function Entry(props) {
 
         <article className="journal-entry">
             <div className="main-image-container">
-                <img className="main-image" src={props.img} alt="mount-fuji"/>
+                <img className="main-image" src={props.img.src} alt="mount-fuji"/>
             </div>
 
             
             <div className="details-container">
             <HiOutlineLocationMarker className="marker"/>
-            <span className="place-name">{props.placeName}</span>
+            <span className="place-name">{props.title}</span>
+            <span className="country">{props.country}</span>
             <a className="google-map-link" 
-            href="https://earth.google.com/web/@0,0,0a,22251752.77375655d,35y,0h,0t,0r/data=CgRCAggBQgIIAEoNCP___________wEQAA"> View on Goole Maps</a>
-            <p className="date">{props.date}</p>
-            <p className="description">{props.description}
+            href={props.googleMapsLink}> View on Goole Maps</a>
+            <p className="date">{props.dates}</p>
+            <p className="description">{props.text}
             </p>
             </div>
         </article>

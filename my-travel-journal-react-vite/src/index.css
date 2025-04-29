@@ -49,9 +49,10 @@ article.journal-entry{
   margin-left: 32px;
   width: 420px;
 }
+
 .date{
   margin-top: 16px;
-  font-size: 24px;
+  font-size: 20x;
   font-weight: 600;
 }
 .description {
@@ -62,7 +63,8 @@ article.journal-entry{
 
 .place-name{
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
+  margin-right: 10px;
 }
 
 .marker{
@@ -71,6 +73,8 @@ article.journal-entry{
 }
 
 .google-map-link{
-  text-decoration: none;
-  color: black;  
+  text-decoration: underline;
+  font-weight: 600;
+  color: black;  margin-left: 2px;
+  font-size: 14px;
 }
