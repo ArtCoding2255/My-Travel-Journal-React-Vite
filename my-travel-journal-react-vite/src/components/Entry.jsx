@@ -1,26 +1,29 @@
 import { HiOutlineLocationMarker } from "react-icons/hi";
 
 export default function Entry(props) {
+    
     return (
 
-        <article className="journal-entry">
+        <article key={props.entry.id} className="journal-entry">
             <div className="main-image-container">
-                <img className="main-image" src={props.img.src} alt="mount-fuji"/>
+                <img className="main-image" src={props.entry?.img.src} alt="mount-fuji"/>
             </div>
 
             
             <div className="details-container">
             <HiOutlineLocationMarker className="marker"/>
-            <span className="place-name">{props.title}</span>
-            <span className="country">{props.country}</span>
+            <span className="place-name">{props.entry.title}</span>
+            <span className="country">{props.entry.country}</span>
             <a className="google-map-link" 
-            href={props.googleMapsLink}> View on Goole Maps</a>
-            <p className="date">{props.dates}</p>
-            <p className="description">{props.text}
+            href={props.entry.googleMapsLink}> View on Goole Maps</a>
+            <p className="date">{props.entry.dates}</p>
+            <p className="description">{props.entry.text}
             </p>
             </div>
         </article>
+        
     )    
+    
 }
 
 
